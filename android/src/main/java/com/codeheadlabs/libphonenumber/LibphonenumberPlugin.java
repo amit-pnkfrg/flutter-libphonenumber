@@ -148,7 +148,7 @@ public class LibphonenumberPlugin implements MethodCallHandler, FlutterPlugin {
     final String isoCode = call.argument("iso_code");
     Phonenumber.PhoneNumber p = phoneUtil.getExampleNumberForType(isoCode, PhoneNumberUtil.PhoneNumberType.MOBILE);
     String regionCode = phoneUtil.getRegionCodeForNumber(p);
-    String formattedNumber = phoneUtil.format(p, PhoneNumberUtil.PhoneNumberFormat.NATIONAL);
+    String formattedNumber = phoneUtil.format(p, PhoneNumberUtil.PhoneNumberFormat.INTERNATIONAL);
 
     Map<String, String> resultMap = new HashMap<String, String>();
     resultMap.put("isoCode", regionCode);

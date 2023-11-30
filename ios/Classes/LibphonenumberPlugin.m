@@ -78,7 +78,7 @@
          NBPhoneNumber *exampleNumber = [self.phoneUtil getExampleNumberForType:isoCode type:NBEPhoneNumberTypeMOBILE error:&err];
          NSString *regionCode = [self.phoneUtil getRegionCodeForNumber:exampleNumber];
          NSString *formattedNumber = [self.phoneUtil format:exampleNumber
-                                                       numberFormat:NBEPhoneNumberFormatNATIONAL
+                                                       numberFormat:NBEPhoneNumberFormatINTERNATIONAL
                                                               error:&err];
          if (err != nil ) {
              result([FlutterError errorWithCode:@"invalid_national_number"
