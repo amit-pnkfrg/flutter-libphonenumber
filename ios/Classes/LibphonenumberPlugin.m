@@ -75,7 +75,7 @@
                  @"formattedPhoneNumber": formattedNumber == nil ? @"" : formattedNumber,
                  });
     } else if([@"getExampleNumber" isEqualToString:call.method]) {
-         NBPhoneNumber *exampleNumber = [self.phoneUtil getExampleNumber:isoCode error:&err];
+         NBPhoneNumber *exampleNumber = [self.phoneUtil getExampleNumberForType:isoCode type:NBEPhoneNumberTypeMOBILE error:&err];
          NSString *regionCode = [self.phoneUtil getRegionCodeForNumber:exampleNumber];
          NSString *formattedNumber = [self.phoneUtil format:exampleNumber
                                                        numberFormat:NBEPhoneNumberFormatNATIONAL
